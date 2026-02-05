@@ -1,0 +1,11 @@
+[project]
+name = "sovereign-ai-platform"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "logfire>=4.22.0",
+    "runhouse>=0.0.42",
+    "temporalio>=1.22.0",
+]

@@ -1,0 +1,36 @@
+# Global settings for the Sovereign Fabric
+global:
+  platformName: "Global-Backbone"
+
+# Module 1: Metabolism (Temporal)
+temporal:
+  server:
+    replicaCount: 1
+  cassandra:
+    enabled: false # We use Postgres via CloudNativePG for sovereign state
+  postgresql:
+    enabled: true
+
+# Module 3: Kinetic (Inference & Retrieval)
+qdrant:
+  storage:
+    size: 10Gi
+
+# Module 2: Autopilot (Telemetry Sink)
+# We deploy an OTLP Collector to act as a local Logfire sink for sovereignty
+otelCollector:
+  enabled: true
+  config:
+    receivers:
+      otlp:
+        protocols:
+          grpc:
+          http:
+    exporters:
+      logging:
+        verbosity: detailed
+    service:
+      pipelines:
+        traces:
+          receivers: [otlp]
+          exporters: [logging]
