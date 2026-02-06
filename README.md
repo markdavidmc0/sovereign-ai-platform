@@ -1,24 +1,16 @@
 # Sovereign AI Platform: The Unified Execution Fabric
 
-The Sovereign AI Platform is a Systems-First architecture designed to replace brittle MLOps pipelines with a Durable Execution Fabric. It treats Data, Ops, and Infra as a single, stateful organism, ensuring that enterprise intelligence is resilient, sovereign, and high-performance.
+The Sovereign AI Platform is a Systems-First architecture designed to replace brittle provide a sovereign AI wrapper around a core hardware stack. It treats Data, Ops, and Infra as a single, stateful organism, ensuring that enterprise intelligence is resilient, sovereign, and high-performance.
 
-## Repository Structure
+## Vision
 ```
-/
-├── bootstrap/
-│   ├── install-k3s.sh         # K3s cluster initialization
-│   └── setup-bedrock.sh       # Helm & Namespace setup
-├── charts/
-│   └── sovereign-stack/       # The Umbrella Helm Chart
-│       ├── Chart.yaml
-│       ├── values.yaml
-│       └── templates/         # Kubernetes resource definitions
-├── examples/
-│   ├── traditional_ml.py      # Module 1 & 3 workflow
-│   └── agentic_reasoning.py   # Module 2 & 5 workflow
-├── docs/
-│   └── onboarding_guide.md    # The 14-Day Sprint
-└── README.md                  # The Manifesto & Overview
+Given that Cloud compute is expensive and some providers are getting greedy with inefficient compute consumption mechanisms and lagging MLOps, a Sovereign AI Platform seeks to manage AI workloads and state across Cloud, on-prem servers and devices. 
+
+Cloud benefit - burst compute and TPU-acceelrated workloads.
+Server beenfit - energy efficient and compute efficient AI workloads.
+Device benefit - lower latency and data-privacy sensitive models.
+
+The unified fabric that connects them all uses technologies like Temporal.io to keep durable context between them all, eBPF, OTEL and Logfire to observe the entire stack from metal to agent and various others to stitch the fabric together.
 ```
 
 ## 5-Module Blueprint
