@@ -5,9 +5,12 @@ The Sovereign AI Platform is a Systems-First architecture designed to replace br
 ## Vision
 Given that Cloud compute is expensive and some providers are getting greedy with inefficient compute consumption mechanisms and lagging MLOps, a Sovereign AI Platform seeks to manage AI workloads and state across Cloud, on-prem servers and devices. 
 
-Cloud benefit - burst compute and TPU-acceelrated workloads.
-Server beenfit - energy efficient and compute efficient AI workloads.
-Device benefit - lower latency and data-privacy sensitive models.
+
+| Tier     | Strategic Focus         |  Architectural Benefit |
+|----------|:-----------------------:|-----------------------:|
+| Cloud    |   Elastic Intelligence  | Dynamic bursting, leveraging TPU-acceleration for foundational training and high-entropy reasoning without over-provisioning on-prem assets.                    |
+| Server   |   Sustainable TCO       | Hardware-aware co-optimization (GPU/MIG) ensures industrial-grade efficiency and maximum performance-per-watt for the enterprise core. |
+| Device   |   Sovereign Privacy     | Deterministic latency, Zero-leakage execution on the NPU. Eliminates network jitter and secures sensitive data by processing at the point of action. |
 
 The unified fabric that connects them all uses technologies like Temporal.io to keep durable context between them all, eBPF, OTEL and Logfire to observe the entire stack from metal to agent and various others to stitch the fabric together.
 
